@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="light">
+  <!-- HEADER -->
+  <header id="header" class="header">
+    <div class="logo-box">
+      <div class="logo">{"</>"}</div>
+    </div>
+
+    <nav class="nav">
+      <a href="#" class="nav-link">Projects</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Skills</a>
+
+      <button class="hire-btn">Let’s Work</button>
+
+      <button id="themeToggle" class="theme-toggle">
+        <i data-lucide="moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="spots">
+        <div class="spot-dot"></div>
+        <span>Currently accepting new clients</span>
+      </div>
+
+      <h1 class="hero-title">
+       I build websites that <br />help your business grow.
+      </h1>
+
+      <!-- UPDATED DESCRIPTION -->
+      <p class="hero-subtitle">
+        I create websites that look great, load fast, and work perfectly on every device.<br />
+        Let’s turn your vision into a polished, modern online presence.
+      </p>
+
+      <button class="view-btn">
+        View Projects →
+      </button>
+
+      <!-- SOCIALS -->
+      <div class="socials">
+        <a href="#" class="pink" title="GitHub"><i data-lucide="github"></i></a>
+        <a href="#" class="red" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" class="music" title="Twitter"><i data-lucide="twitter"></i></a>
+      </div>
+
+      <!-- REVIEWS -->
+      <div class="reviews">
+        <span class="stars">★★★★★</span>
+        <span>Trusted by 10+ Clients Worldwide</span>
+      </div>
+    </div>
+
+ <div class="carousel-box">
+  <div class="carousel">
+    <div class="carousel-inner">
+      <img id="carouselImage" src="" alt="project" />
+    </div>
+
+    <button id="prevBtn" class="carousel-nav left">
+      <i data-lucide="chevron-left"></i>
+    </button>
+
+    <button id="nextBtn" class="carousel-nav right">
+      <i data-lucide="chevron-right"></i>
+    </button>
+  </div>
+
+  <div id="dots" class="dots"></div>
+</div>
+
+  <div class="selected-edits-container">
+    <div class="header">
+      <span class="work-label">● Work</span>
+      <h1 class="main-title">Selected edits</h1>
+    </div>
+
+    <div class="grid" id="editsGrid">
+      <!-- Cards will be injected here by JS -->
+    </div>
+  </div>
+
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

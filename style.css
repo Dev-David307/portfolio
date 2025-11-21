@@ -481,25 +481,6 @@ textarea {
     font-weight: 900;
   }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .quote-section {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
-
-  .quote-info {
-    width: 100%;
-  }
-}
-
-
-@media (max-width: 700px) {
-  .iframe-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 
 

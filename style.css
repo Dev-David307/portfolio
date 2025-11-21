@@ -334,13 +334,8 @@ body {
 }
 
 .quote-section {
- 
   background: #f3f4f6;
 }
-
-/* .quote-section h2{
-  text-align: center;
-} */
 
 .quote-section .f{
   display: flex;
@@ -377,7 +372,6 @@ body {
   text-decoration: none;
 }
 
-/* FORM CARD */
 .quote-form {
   background: white;
   padding: 40px;

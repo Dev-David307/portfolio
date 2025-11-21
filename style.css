@@ -69,6 +69,24 @@ body {
   transform: scale(1.05);
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
 .theme-toggle {
   padding: 10px;
   border-radius: 10px;

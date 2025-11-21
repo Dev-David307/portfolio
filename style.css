@@ -1212,7 +1212,7 @@ textarea {
 }
 
 @media (max-width: 768px) {
-  .nav {
+  .nav-links {
     position: absolute;
     top: 80px;
     right: 0;
@@ -1225,15 +1225,11 @@ textarea {
     display: none;
   }
 
-  .nav.show {
+  .nav-links.show {
     display: flex;
   }
 
   .hamburger {
     display: flex;
-  }
-
-  .hire-btn, .theme-toggle {
-    width: 100%;
   }
 }

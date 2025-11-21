@@ -1153,6 +1153,7 @@ textarea {
   .quote-info {
     padding: 20px;
     font-size: 12px;
+    width: 360px;
   }
 
   .quote-info h3 {

@@ -341,7 +341,6 @@ body {
   display: flex;
   gap: 40px;
   padding: 0px 40px;
-  
 }
 
 .quote-info {
@@ -423,7 +422,6 @@ textarea {
   resize: none;
 }
 
-/* Options like pills */
 .option-grid {
   display: flex;
   flex-wrap: wrap;
@@ -448,7 +446,6 @@ textarea {
   border-color: #2563eb;
 }
 
-/* Button */
 .submit-btn {
   padding: 14px 25px;
   background: #2563eb;

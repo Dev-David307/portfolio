@@ -88,9 +88,9 @@ function updateSlide() {
 }
 
   const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.nav');
+  const navLinks = document.querySelector('.nav-links');
 
   hamburger.addEventListener('click', () => {
-    nav.classList.toggle('show');
+    navLinks.classList.toggle('show');
     hamburger.classList.toggle('active');
   });

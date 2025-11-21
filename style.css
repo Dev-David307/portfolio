@@ -53,6 +53,10 @@ body {
   font-size: 20px;
 }
 
+.nav-link:hover {
+  color: #2563eb; /* highlight on hover */
+}
+
 .hire-btn {
   background: #2563eb;
   padding: 10px 25px;

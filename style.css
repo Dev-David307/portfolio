@@ -17,8 +17,10 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 50px;
   border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
 }
 
 .dark .header {
@@ -28,7 +30,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   height: 60px;
   padding: 0 15px;
 }
@@ -37,12 +39,6 @@ body {
   height: 250%;
   width: auto;
   object-fit: contain;
-}
-
-@media (max-width: 768px) {
-  .logo {
-    height: 40px;
-  }
 }
 
 .nav {
@@ -54,6 +50,7 @@ body {
 .nav-link {
   color: inherit;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .hire-btn {
@@ -63,6 +60,13 @@ body {
   border: none;
   border-radius: 25px;
   cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.hire-btn:hover {
+  background: #1e40af;
+  transform: scale(1.05);
 }
 
 .theme-toggle {
@@ -71,6 +75,12 @@ body {
   border: none;
   background: #e5e7eb;
   cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
 }
 
 .dark .theme-toggle {
@@ -81,18 +91,22 @@ body {
 .hero-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 100px 80px;
+  gap: 40px;
 }
 
 .hero-title {
   font-size: 60px;
   font-weight: 300;
+  line-height: 1.2;
 }
 
 .hero-subtitle {
   margin-top: 15px;
   margin-bottom: 30px;
   color: #666;
+  font-size: 18px;
 }
 
 .dark .hero-subtitle {
@@ -107,6 +121,14 @@ body {
   border-radius: 25px;
   cursor: pointer;
   margin-bottom: 30px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.view-btn:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
 }
 
 .socials {
@@ -116,8 +138,19 @@ body {
   margin-bottom: 25px;
 }
 
+.socials a {
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+  color: #2563eb;
+}
+
 .reviews {
   color: #888;
+  font-size: 14px;
 }
 
 .dark .reviews {
@@ -133,6 +166,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .carousel {
@@ -173,6 +207,7 @@ body {
   cursor: pointer;
   color: white;
   transition: 0.25s ease;
+  z-index: 10;
 }
 
 .carousel-nav:hover {
@@ -211,13 +246,14 @@ body {
 }
 
 .portfolio-area {
-  padding: 10px; 
+  padding: 10px;
   min-height: 10vh;
 }
 
 .portfolio-wrapper {
   max-width: 1150px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .portfolio-header {
@@ -239,6 +275,10 @@ body {
   margin: 0;
 }
 
+.dark .portfolio-title {
+  color: #eee;
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -248,6 +288,10 @@ body {
 .iframe-section {
   padding: 20px;
   background: #f8f9fa;
+}
+
+.dark .iframe-section {
+  background: #1a202c;
 }
 
 .iframe-grid {
@@ -288,6 +332,10 @@ body {
   color: #1f2937;
 }
 
+.dark .services-title {
+  color: #eee;
+}
+
 .service-card {
   display: flex;
   gap: 20px;
@@ -297,6 +345,17 @@ body {
   margin-bottom: 30px;
   align-items: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.dark .service-card {
+  background: #1f2937;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .service-image img {
@@ -304,6 +363,7 @@ body {
   height: auto;
   border-radius: 12px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .service-content h3 {
@@ -312,9 +372,17 @@ body {
   color: #111827;
 }
 
+.dark .service-content h3 {
+  color: #eee;
+}
+
 .service-content p {
   margin: 0 0 10px 0;
   color: #4b5563;
+}
+
+.dark .service-content p {
+  color: #aaa;
 }
 
 .service-tags span {
@@ -330,12 +398,18 @@ body {
 
 .quote-section {
   background: #f3f4f6;
+  padding: 60px 20px;
 }
 
-.quote-section .f{
+.dark .quote-section {
+  background: #0f172a;
+}
+
+.quote-section .f {
   display: flex;
   gap: 40px;
-  padding: 0px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .quote-info {
@@ -344,6 +418,7 @@ body {
   padding: 40px;
   width: 280px;
   border-radius: 16px;
+  flex-shrink: 0;
 }
 
 .quote-info h3 {
@@ -355,6 +430,7 @@ body {
   opacity: 0.9;
   margin-bottom: 25px;
   line-height: 1.5;
+  font-size: 15px;
 }
 
 .email-link {
@@ -364,6 +440,12 @@ body {
   color: white;
   border-radius: 8px;
   text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.email-link:hover {
+  background: rgba(255,255,255,0.3);
 }
 
 .quote-form {
@@ -375,10 +457,18 @@ body {
   flex: 1;
 }
 
+.dark .quote-form {
+  background: #1f2937;
+}
+
 .form-title {
   font-size: 38px;
   margin-bottom: 30px;
   color: #1f2937;
+}
+
+.dark .form-title {
+  color: #eee;
 }
 
 .form-row {
@@ -405,16 +495,36 @@ label {
   color: #4b5563;
 }
 
+.dark label {
+  color: #aaa;
+}
+
 input, textarea {
   padding: 14px;
   border: 1px solid #d1d5db;
   border-radius: 10px;
   font-size: 15px;
+  background: #fff;
+  color: #1f2937;
+  transition: all 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.dark input, .dark textarea {
+  background: #111827;
+  color: #eee;
+  border-color: #374151;
 }
 
 textarea {
   height: 120px;
   resize: none;
+  font-family: inherit;
 }
 
 .option-grid {
@@ -431,14 +541,22 @@ textarea {
   border-radius: 25px;
   cursor: pointer;
   border: 1px solid transparent;
+  font-size: 14px;
+  transition: all 0.3s;
 }
 
-.option input {
-  margin-right: 8px;
+.dark .option {
+  background: #374151;
 }
 
 .option:hover {
   border-color: #2563eb;
+  background: #e0e7ff;
+}
+
+.option input {
+  margin-right: 8px;
+  cursor: pointer;
 }
 
 .submit-btn {
@@ -450,31 +568,626 @@ textarea {
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+  transition: all 0.3s;
+  width: 100%;
+  font-weight: 600;
 }
 
 .submit-btn:hover {
-  background: #1e4fc7;
+  background: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
 }
 
-  .contact-heading {
-    font-size: 36px;
-    font-weight: 700;
-    text-transform: lowercase;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.contact-heading {
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+}
+
+.contact-heading .dot {
+  color: #0a66c2;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+/* TABLET (768px - 1024px) */
+@media (max-width: 1024px) {
+  .header {
+    padding: 20px 30px;
+  }
+
+  .hero-container {
+    padding: 80px 40px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .carousel {
+    width: 300px;
+    height: 430px;
+  }
+
+  .portfolio-grid {
+    gap: 20px;
+  }
+
+  .portfolio-title {
+    font-size: 40px;
+  }
+
+  .service-image img {
+    width: 150px;
+  }
+
+  .quote-section .f {
+    gap: 30px;
+  }
+
+  .quote-info {
+    width: 240px;
+  }
+
+  .form-row {
+    gap: 15px;
+  }
+
+  .iframe-grid {
+    gap: 20px;
+  }
+}
+
+/* SMALL TABLET / LANDSCAPE (640px - 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .nav {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .hire-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .socials {
     justify-content: center;
+    font-size: 22px;
+  }
+
+  .reviews {
+    text-align: center;
+  }
+
+  .carousel-box {
+    width: 100%;
+  }
+
+  .carousel {
+    width: 100%;
+    max-width: 350px;
+    height: 450px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .portfolio-title {
+    font-size: 32px;
+  }
+
+  .portfolio-subtitle {
+    font-size: 13px;
+  }
+
+  .iframe-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .service-image img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .services-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .services-section {
+    padding: 50px 15px;
+  }
+
+  .quote-section .f {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .quote-info {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .quote-form {
+    max-width: 100%;
+    padding: 30px;
+  }
+
+  .form-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 15px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .contact-heading {
+    font-size: 28px;
   }
 
   .contact-heading .dot {
-    color: #0a66c2;
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 32px;
+  }
+}
+
+/* MOBILE (480px - 640px) */
+@media (max-width: 640px) {
+  .header {
+    padding: 12px 15px;
+    justify-content: space-between;
   }
 
+  .logo {
+    height: 45px;
+  }
 
+  .nav {
+    gap: 8px;
+    font-size: 12px;
+  }
 
+  .nav-link {
+    font-size: 12px;
+  }
 
+  .hire-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
 
+  .hero-container {
+    padding: 40px 15px;
+    gap: 25px;
+  }
 
+  .hero-title {
+    font-size: 28px;
+    font-weight: 400;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .view-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .socials {
+    font-size: 20px;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .reviews {
+    font-size: 12px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    aspect-ratio: 9/13;
+  }
+
+  .portfolio-title {
+    font-size: 26px;
+  }
+
+  .portfolio-subtitle {
+    font-size: 12px;
+  }
+
+  .services-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .services-section {
+    padding: 40px 12px;
+  }
+
+  .service-card {
+    padding: 12px;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .service-image img {
+    max-width: 120px;
+    width: 100%;
+  }
+
+  .service-content h3 {
+    font-size: 16px;
+  }
+
+  .service-content p {
+    font-size: 13px;
+  }
+
+  .service-tags span {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .form-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  label {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  input, textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .contact-heading {
+    font-size: 22px;
+  }
+
+  .contact-heading .dot {
+    font-size: 28px;
+  }
+
+  .quote-section .f {
+    padding: 0 12px;
+    gap: 15px;
+  }
+
+  .quote-form {
+    padding: 25px;
+  }
+
+  .quote-info {
+    padding: 25px;
+    font-size: 13px;
+  }
+
+  .quote-info h3 {
+    font-size: 20px;
+  }
+
+  .quote-info p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .email-link {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .option {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .option-grid {
+    gap: 8px;
+  }
+
+  .form-row {
+    margin-bottom: 12px;
+  }
+
+  .form-group.full {
+    margin-bottom: 12px;
+  }
+}
+
+/* SMALL MOBILE (< 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .logo {
+    height: 38px;
+    padding: 0 8px;
+  }
+
+  .nav {
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .nav-link {
+    font-size: 10px;
+  }
+
+  .hire-btn {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .hero-container {
+    padding: 30px 12px;
+    gap: 20px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  .view-btn {
+    padding: 9px 18px;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .socials {
+    font-size: 18px;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .reviews {
+    font-size: 11px;
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9/13;
+    max-width: 280px;
+    padding: 6px;
+    border-radius: 16px;
+  }
+
+  .carousel-nav {
+    padding: 8px;
+  }
+
+  .dots {
+    margin-top: 12px;
+    gap: 6px;
+  }
+
+  .dots button {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dots button.active {
+    width: 20px;
+  }
+
+  .portfolio-area {
+    padding: 8px;
+  }
+
+  .portfolio-header {
+    margin-bottom: 30px;
+  }
+
+  .portfolio-title {
+    font-size: 22px;
+  }
+
+  .portfolio-subtitle {
+    font-size: 11px;
+  }
+
+  .services-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .services-section {
+    padding: 35px 10px;
+  }
+
+  .service-card {
+    padding: 10px;
+    margin-bottom: 15px;
+    gap: 10px;
+  }
+
+  .service-image img {
+    max-width: 100px;
+    width: 100%;
+  }
+
+  .service-content h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .service-content p {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .service-tags span {
+    font-size: 10px;
+    padding: 2px 6px;
+    margin-right: 4px;
+  }
+
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  label {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  input, textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  .submit-btn {
+    padding: 10px 15px;
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  .contact-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .contact-heading .dot {
+    font-size: 22px;
+  }
+
+  .quote-section {
+    padding: 40px 12px;
+  }
+
+  .quote-section .f {
+    padding: 0;
+    gap: 12px;
+  }
+
+  .quote-form {
+    padding: 20px;
+  }
+
+  .quote-info {
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  .quote-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .quote-info p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .email-link {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .form-row {
+    margin-bottom: 10px;
+  }
+
+  .form-group.full {
+    margin-bottom: 10px;
+  }
+
+  .option {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .option-grid {
+    gap: 6px;
+  }
+
+  .iframe-grid {
+    gap: 12px;
+  }
+}

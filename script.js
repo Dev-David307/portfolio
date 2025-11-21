@@ -17,7 +17,7 @@ themeToggle.addEventListener("click", () => {
 const videos = [
   {
     image:
-      "https://images.unsplash.com/photo-1516738901601-eab0b2e6a1cc?w=400&h=600&fit=crop",
+      "./images/WhatsApp Image 2025-11-13 at 15.33.47_c2fd478d.jpg",
   },
   {
     image:

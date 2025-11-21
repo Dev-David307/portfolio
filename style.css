@@ -20,7 +20,7 @@ body {
   justify-content: space-between;
   padding: 15px 30px;
   position: relative;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .dark .header {

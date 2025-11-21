@@ -1212,17 +1212,23 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+
   .nav-links {
     position: absolute;
-    top: 80px;
-    right: 0;
+    top: 60px; /* below header */
+    left: 50%;
+    transform: translateX(-50%);
     background: #fff;
     flex-direction: column;
     width: 200px;
-    padding: 20px;
+    padding: 15px;
     gap: 15px;
     border: 1px solid #ddd;
     display: none;
+    z-index: 10;
   }
 
   .nav-links.show {
@@ -1231,5 +1237,16 @@ textarea {
 
   .hamburger {
     display: flex;
+    order: 2; /* center visually */
+  }
+
+  .header-buttons {
+    order: 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .logo {
+    order: 1;
   }
 }

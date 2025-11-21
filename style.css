@@ -20,7 +20,7 @@ body {
   justify-content: space-between;
   padding: 15px 30px;
   position: relative;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .dark .header {
@@ -1218,7 +1218,7 @@ textarea {
 
   .nav-links {
     position: absolute;
-    top: 60px; /* below header */
+    top: 60px; 
     left: 50%;
     transform: translateX(-50%);
     background: #fff;
@@ -1250,3 +1250,4 @@ textarea {
     order: 1;
   }
 }
+

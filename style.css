@@ -684,8 +684,8 @@ textarea {
     }
 
     .footer-logo-img {
-      height: 50px;
-      width: auto;
+      height: 80px;
+      width: 100px;
       object-fit: contain;
       transition: opacity 0.3s;
     }
@@ -805,7 +805,6 @@ textarea {
       color: #2563eb;
     }
 
-    /* ========== RESPONSIVE ========== */
     @media (max-width: 1024px) {
       .footer-content {
         grid-template-columns: repeat(2, 1fr);
@@ -916,7 +915,6 @@ textarea {
       }
     }
 
-/* TABLET (768px - 1024px) */
 @media (max-width: 1024px) {
   .header {
     padding: 20px 30px;
@@ -964,7 +962,6 @@ textarea {
   }
 }
 
-/* SMALL TABLET / LANDSCAPE (640px - 768px) */
 @media (max-width: 768px) {
   .header {
     padding: 15px 20px;
@@ -1102,7 +1099,6 @@ textarea {
   }
 }
 
-/* MOBILE (480px - 640px) */
 @media (max-width: 640px) {
   .header {
     padding: 12px 15px;
@@ -1281,7 +1277,6 @@ textarea {
   }
 }
 
-/* SMALL MOBILE (< 480px) */
 @media (max-width: 480px) {
   .header {
     padding: 10px 12px;
@@ -1469,7 +1464,7 @@ textarea {
   .quote-info {
     padding: 20px;
     font-size: 12px;
-    width: 360px;
+    width: 350px;
   }
 
   .quote-info h3 {

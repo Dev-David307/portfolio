@@ -622,42 +622,7 @@ textarea {
   font-weight: 900;
 }
 
-body.dark {
-      background: #0f172a;
-      color: #eee;
-    }
 
-    .demo-content {
-      min-height: 60vh;
-      padding: 60px 20px;
-      text-align: center;
-      color: #333;
-    }
-
-    body.dark .demo-content {
-      color: #eee;
-    }
-
-    .demo-content h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    .theme-toggle-demo {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      background: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 14px;
-      z-index: 1000;
-    }
-
-    /* ========== FOOTER STYLES ========== */
     footer {
       background: #1f2937;
       color: #d1d5db;

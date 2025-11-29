@@ -621,8 +621,6 @@ textarea {
   font-size: 40px;
   font-weight: 900;
 }
-
-
     footer {
       background: #1f2937;
       color: #d1d5db;
@@ -640,10 +638,12 @@ textarea {
     }
 
     .footer-content {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       gap: 40px;
       margin-bottom: 50px;
+      flex-wrap: wrap;
     }
 
     .footer-section h3 {
@@ -661,6 +661,8 @@ textarea {
 
     .footer-section ul li {
       margin-bottom: 12px;
+      display: inline;
+      margin-right: 30px;
     }
 
     .footer-section a {
@@ -677,6 +679,7 @@ textarea {
 
     .footer-logo-section {
       margin-bottom: 30px;
+      flex: 0 0 auto;
     }
 
     .footer-logo-container {
@@ -684,8 +687,8 @@ textarea {
     }
 
     .footer-logo-img {
-      height: 80px;
-      width: 100px;
+      height: 50px;
+      width: auto;
       object-fit: contain;
       transition: opacity 0.3s;
     }
@@ -805,10 +808,16 @@ textarea {
       color: #2563eb;
     }
 
+    /* ========== RESPONSIVE ========== */
     @media (max-width: 1024px) {
       .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .footer-section ul li {
+        display: block;
+        margin-right: 0;
       }
     }
 
@@ -818,8 +827,13 @@ textarea {
       }
 
       .footer-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 30px;
+      }
+
+      .footer-section ul li {
+        display: block;
+        margin-right: 0;
       }
 
       .footer-section h3 {

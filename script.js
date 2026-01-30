@@ -20,7 +20,7 @@ const videos = [
   },
   {
     image:
-      "./images/WhatsApp Image 2025-11-13 at 15.33.47_c2fd478d.jpg",
+      "./images/david.jpg",
   },
   {
     image:

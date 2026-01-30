@@ -16,8 +16,7 @@ themeToggle.addEventListener("click", () => {
 // CAROUSEL
 const videos = [
   {
-    image:
-      "./images/WhatsApp Image 2025-11-13 at 15.33.47_c2fd478d.jpg",
+    image: "./images/WhatsApp Image 2025-11-13 at 15.33.47_c2fd478d.jpg",
   },
   {
     image:
@@ -30,23 +29,39 @@ const videos = [
 ];
 
 let currentSlide = 0;
+let autoSlideInterval;
 
 const carouselImage = document.getElementById("carouselImage");
 const dotsContainer = document.getElementById("dots");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
 
 // Create dots
 videos.forEach((_, i) => {
   const dot = document.createElement("div");
   dot.classList.add("dot");
   if (i === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => goToSlide(i));
+
+  dot.addEventListener("click", () => {
+    goToSlide(i);
+    resetAutoSlide();
+  });
+
   dotsContainer.appendChild(dot);
 });
 
 const dots = document.querySelectorAll(".dot");
 
+// Animate + render slide
 function renderSlide() {
-  carouselImage.src = videos[currentSlide].image;
+  carouselImage.style.opacity = "0";
+  carouselImage.style.transform = "scale(1.05)";
+
+  setTimeout(() => {
+    carouselImage.src = videos[currentSlide].image;
+    carouselImage.style.opacity = "1";
+    carouselImage.style.transform = "scale(1)";
+  }, 300);
 
   dots.forEach((dot, i) => {
     dot.classList.toggle("active", i === currentSlide);
@@ -68,24 +83,31 @@ function goToSlide(i) {
   renderSlide();
 }
 
-document.getElementById("nextBtn").addEventListener("click", nextSlide);
-document.getElementById("prevBtn").addEventListener("click", prevSlide);
-
-renderSlide();
-
-function updateSlide() {
-  const img = document.getElementById("carouselImage");
-  img.style.opacity = "0";
-  img.style.transform = "scale(1.05)";
-
-  setTimeout(() => {
-    img.src = videos[currentSlide].image;
-    img.style.opacity = "1";
-    img.style.transform = "scale(1)";
-  }, 300);
-
-  updateDots();
+// Auto slide every 5 seconds
+function startAutoSlide() {
+  autoSlideInterval = setInterval(nextSlide, 5000);
 }
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+// Button events
+nextBtn.addEventListener("click", () => {
+  nextSlide();
+  resetAutoSlide();
+});
+
+prevBtn.addEventListener("click", () => {
+  prevSlide();
+  resetAutoSlide();
+});
+
+// Init
+renderSlide();
+startAutoSlide();
+
 
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');

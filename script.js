@@ -24,7 +24,7 @@ const videos = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1533227268884-1be32fe00fcd?w=400&h=600&fit=crop",
+      "./images/ime.jpg",
   },
 ];
 

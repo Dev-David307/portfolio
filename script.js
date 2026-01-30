@@ -20,7 +20,7 @@ const videos = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&h=600&fit=crop",
+      "./images/WhatsApp Image 2025-11-13 at 15.33.47_c2fd478d.jpg",
   },
   {
     image:

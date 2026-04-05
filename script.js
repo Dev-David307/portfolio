@@ -20,7 +20,7 @@ const videos = [
   },
   {
     image:
-      "./images/david.jpg",
+      "./images/david1.jpeg",
   },
   {
     image:
